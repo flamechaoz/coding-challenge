@@ -9,21 +9,12 @@ const routes = [
     //
     {
         path: '/',
-        component: require('./components/Auth/Login.vue').default,
+        component: require('./components/Dashboard/Dashboard.vue').default,
         name: 'index',
         meta: {
-            title: 'Watch | Login'
+            title: 'Coding Challenge'
         }
 
-    },
-    {
-
-        path: '/login',
-        component: require('./components/Auth/Login.vue').default,
-        name: 'login',
-        meta: {
-            title: 'Watch | Login'
-        }
     },
     {
 
@@ -31,8 +22,7 @@ const routes = [
         component: require('./components/Dashboard/Dashboard.vue').default,
         name: 'dashboard',
         meta: {
-            title: 'Watch | Dashboard',
-            requiresAuth: true
+            title: 'Coding Challenge'
         }
     },
     {
@@ -41,18 +31,7 @@ const routes = [
         component: require('./components/Dashboard/Dashboard.vue').default,
         name: 'home',
         meta: {
-            title: 'Watch | Dashboard',
-            requiresAuth: true
-        }
-    },
-    {
-
-        path: '/students',
-        component: require('./components/Student/Student.vue').default,
-        name: 'home',
-        meta: {
-            title: 'Watch | Students',
-            requiresAuth: true
+            title: 'Coding Challenge'
         }
     },
     {
@@ -83,7 +62,7 @@ const reset_user_session = () => {
 };
 
 router.beforeEach((to, from, next) => {
-    document.title = typeof to.meta.title === 'undefined' ? 'Watch' : to.meta.title;
+    document.title = typeof to.meta.title === 'undefined' ? 'Coding Challenge' : to.meta.title;
     let local_storage_log = false
 
     if (localStorage.getItem("_watch_user")) {

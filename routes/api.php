@@ -19,10 +19,16 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // api/auth/
-Route::group(['prefix' => 'auth', 'namespace' => 'Api'], function () {
-    Route::post('login', 'LoginController@login')->name('auth.login');
-    Route::get('login', 'LoginController@fallback')->name('login');
+// Route::group(['prefix' => 'auth', 'namespace' => 'Api'], function () {
+//     Route::post('login', 'LoginController@login')->name('auth.login');
+//     Route::get('login', 'LoginController@fallback')->name('login');
 
-    Route::middleware('auth:api')->get('userData', 'LoginController@userData')->name('userData');
-    Route::middleware('auth:api')->get('logout', 'LoginController@logout')->name('logout');
+//     Route::middleware('auth:api')->get('userData', 'LoginController@userData')->name('userData');
+//     Route::middleware('auth:api')->get('logout', 'LoginController@logout')->name('logout');
+// });
+
+// api/event
+Route::group(['prefix' => 'event', 'namespace' => 'Api'], function () {
+    Route::get('', 'EventController@index')->name('index');
+    Route::post('saveEvent', 'EventController@saveEvent')->name('save_event');
 });

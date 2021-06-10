@@ -13,10 +13,12 @@ import Vuetify from "../plugins/vuetify";
 
 import store from "./store";
 import router from "./routes";
+import moment from 'moment';
 
 import swal from 'sweetalert2';
 
 window.Swal = swal;
+window.moment = moment;
 
 const toast = swal.mixin({
     toast: true,
