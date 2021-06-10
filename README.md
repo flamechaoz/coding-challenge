@@ -18,7 +18,7 @@ This repository has a number of packages installed including Vuetify, Vuex, and 
         DB_CONNECTION=mysql
         DB_HOST=127.0.0.1
         DB_PORT=3306
-        DB_DATABASE=watch
+        DB_DATABASE=code_challenge
         DB_USERNAME=root
         DB_PASSWORD=
         ```
